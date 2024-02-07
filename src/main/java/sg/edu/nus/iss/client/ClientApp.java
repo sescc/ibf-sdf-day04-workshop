@@ -29,7 +29,7 @@ public class ClientApp {
 
                 Console cons = System.console();
 
-                String input = cons.readLine("Server command to the server: ");
+                String input = cons.readLine("Send command to the server: ");
                 dos.writeUTF(input);
                 dos.flush();
 
@@ -44,7 +44,7 @@ public class ClientApp {
                 // need to close here instead of in finally section
                 is.close();
                 os.close();
-                // sock.close();    // check why intructor did not need to close this
+                sock.close();
             }
         } catch (NumberFormatException e) {
             e.printStackTrace();
@@ -52,9 +52,9 @@ public class ClientApp {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
+        } /*finally {
 
-        }
+        }*/
 
     }
 

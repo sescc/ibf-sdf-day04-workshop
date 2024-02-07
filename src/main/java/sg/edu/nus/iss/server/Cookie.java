@@ -1,7 +1,7 @@
 package sg.edu.nus.iss.server;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
+//import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -27,10 +27,10 @@ public class Cookie {
             e.printStackTrace();
         }
 
-        return "cookie-text_cookie";
+        return randomCookie;
     }
 
-    private static List<String> getDataFromCookieFile(String cookieFilePath) throws FileNotFoundException {
+    private static List<String> getDataFromCookieFile(String cookieFilePath) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(cookieFilePath));
         List<String> cookies = new LinkedList<>();
         String line;
