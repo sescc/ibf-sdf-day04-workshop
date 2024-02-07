@@ -20,7 +20,7 @@ public class ClientApp {
             while (true) {
                 Socket sock = new Socket(connInfo[0], Integer.parseInt(connInfo[1]));
                 is = sock.getInputStream();
-                // put inside loop so that it doesn't keep reusing "cached" cookie / datastream
+                // declare inside loop so that it doesn't keep reusing "cached" cookie / datastream
                 // won't get cut off halfway
                 DataInputStream dis = new DataInputStream(is);
 
